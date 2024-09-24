@@ -1,13 +1,13 @@
+// src/pages/HomePage.js
 import React from 'react';
-import { Row, Col, Layout, Select, Slider } from 'antd';
+import { Row, Col, Layout } from 'antd';
 import Header from '../components/Header'; // Import your Header component
 import PropertyCard from '../components/PropertyCard'; // Import your PropertyCard component
+import FilterComponent from '../components/FilterComponent'; // Import your FilterComponent
 
 const { Content, Footer } = Layout;
-const { Option } = Select;
 
 const HomePage = () => {
-
   const properties = [
     {
       id: 1,
@@ -40,26 +40,15 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <Header /> {/* Render your Header component */}
       <Content style={{ padding: '50px' }}>
         <Row gutter={16}>
           {/* Filter Section */}
-          <Col span={6}>
-            <h3>Filters</h3>
-            <Select
-              placeholder="Select Location"
-              style={{ width: '100%', marginBottom: '20px' }}
-            >
-              <Option value="Goa">Goa</Option>
-              <Option value="Mumbai">Mumbai</Option>
-              <Option value="Kerala">Kerala</Option>
-            </Select>
-            <h4>Price Range</h4>
-            <Slider range defaultValue={[0, 500]} min={0} max={500} />
+          <Col span={5}>
+            <FilterComponent /> {/* Use the FilterComponent */}
           </Col>
 
           {/* Property Listings */}
-          <Col span={18}>
+          <Col span={19}>
             <Row gutter={[16, 16]}>
               {properties.map((property) => (
                 <Col span={8} key={property.id}>
