@@ -1,37 +1,23 @@
 // src/pages/CartPage.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Layout, Card, Button, Row, Col, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromCart } from '../redux/Property/cartSlice'; // Import the action to remove from cart
 
 const { Content, Footer } = Layout;
 const { Title } = Typography;
 
 const CartPage = () => {
-  // Sample booked properties data (In a real app, this would come from state or context)
-  const [bookedProperties, setBookedProperties] = useState([
-    {
-      id: 1,
-      title: 'Luxury Villa',
-      price: 250,
-      location: 'Goa',
-      image: 'https://via.placeholder.com/150',
-      quantity: 1, // Quantity of the booked property
-    },
-    {
-      id: 2,
-      title: 'Cozy Apartment',
-      price: 120,
-      location: 'Mumbai',
-      image: 'https://via.placeholder.com/150',
-      quantity: 1,
-    },
-  ]);
-
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // Fetch booked properties from Redux state
+  const bookedProperties = useSelector((state) => state.cart.cartItems); // Access cart items from Redux
+
   const handleRemove = (id) => {
-    // Logic to remove the property from the cart
-    setBookedProperties(bookedProperties.filter(property => property.id !== id));
+    // Dispatch action to remove the property from the cart
+    dispatch(removeFromCart(id));
   };
 
   const handleCheckout = () => {

@@ -1,62 +1,54 @@
 // src/pages/HomePage.js
-import React from 'react';
-import { Row, Col, Layout } from 'antd'; // Import your Header component
+import React, { useEffect } from 'react';
+import { Row, Col, Layout, Spin } from 'antd'; // Added Spin for loading state
+import { useDispatch, useSelector } from 'react-redux';
 import PropertyCard from '../components/PropertyCard'; // Import your PropertyCard component
 import FilterComponent from '../components/FilterComponent'; // Import your FilterComponent
+import { fetchProperties } from '../redux/Property/propertySlice'; // Import fetchProperties action
 
 const { Content, Footer } = Layout;
 
 const HomePage = () => {
-  const properties = [
-    {
-      id: 1,
-      title: 'Luxury Villa',
-      description: 'A beautiful villa with a pool and garden.',
-      price: 250,
-      location: 'Goa',
-      bedrooms: 3,
-      image: 'https://via.placeholder.com/150',
-    },
-    {
-      id: 2,
-      title: 'Cozy Apartment',
-      description: 'A modern apartment in the city center.',
-      price: 120,
-      location: 'Mumbai',
-      bedrooms: 2,
-      image: 'https://via.placeholder.com/150',
-    },
-    {
-      id: 3,
-      title: 'Beach House',
-      description: 'Enjoy the beach with this seaside house.',
-      price: 300,
-      location: 'Kerala',
-      bedrooms: 4,
-      image: 'https://via.placeholder.com/150',
-    },
-  ];
+  const dispatch = useDispatch();
+  const properties = useSelector((state) => state.properties.properties);
+  const propertyStatus = useSelector((state) => state.properties.status);
+  const error = useSelector((state) => state.properties.error);
+
+  useEffect(() => {
+    if (propertyStatus === 'idle') {
+      dispatch(fetchProperties());
+      console.log("dispatched")
+    }
+  }, [propertyStatus, dispatch]);
 
   return (
     <Layout>
       <Content style={{ padding: '50px' }}>
-        <Row gutter={16}>
-          {/* Filter Section */}
-          <Col span={5}>
-            <FilterComponent /> {/* Use the FilterComponent */}
-          </Col>
+        {propertyStatus === 'loading' && <Spin tip="Loading properties..." />}
 
-          {/* Property Listings */}
-          <Col span={19}>
-            <Row gutter={[16, 16]}>
-              {properties.map((property) => (
-                <Col span={8} key={property.id}>
-                  <PropertyCard property={property} />
-                </Col>
-              ))}
-            </Row>
-          </Col>
-        </Row>
+        {propertyStatus === 'succeeded' && (
+          <Row gutter={16}>
+            {/* Filter Section */}
+            <Col span={5}>
+              <FilterComponent /> {/* Use the FilterComponent */}
+            </Col>
+
+            {/* Property Listings */}
+            <Col span={19}>
+              <Row gutter={[16, 16]}>
+                {properties.map((property) => (
+                  <Col span={8} key={property.id}>
+                    <PropertyCard property={property} />
+                  </Col>
+                ))}
+              </Row>
+            </Col>
+          </Row>
+        )}
+
+        {propertyStatus === 'failed' && (
+          <div style={{ color: 'red' }}>Error: {error}</div>
+        )}
       </Content>
       <Footer style={{ textAlign: 'center' }}>Property Rental Platform ©2024</Footer>
     </Layout>

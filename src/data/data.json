@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title": "Luxury Villa",
+      "description": "A beautiful villa with a pool and garden.",
+      "price": 250,
+      "location": "Goa",
+      "bedrooms": 3,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "title": "Cozy Apartment",
+      "description": "A modern apartment in the city center.",
+      "price": 120,
+      "location": "Mumbai",
+      "bedrooms": 2,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "title": "Beach House",
+      "description": "Enjoy the beach with this seaside house.",
+      "price": 300,
+      "location": "Kerala",
+      "bedrooms": 4,
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+  
