@@ -1,7 +1,6 @@
 // src/pages/HomePage.js
 import React from 'react';
-import { Row, Col, Layout } from 'antd';
-import Header from '../components/Header'; // Import your Header component
+import { Row, Col, Layout } from 'antd'; // Import your Header component
 import PropertyCard from '../components/PropertyCard'; // Import your PropertyCard component
 import FilterComponent from '../components/FilterComponent'; // Import your FilterComponent
 
