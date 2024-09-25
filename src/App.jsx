@@ -1,10 +1,11 @@
 // src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import CartPage from "./pages/CartPage"; // Create this page
-// import LoginPage from "./pages/LoginPage"; // Create this page
 import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import CartPage from "./pages/CartPage"; 
+import CheckoutPage from "./pages/CheckoutPage";
+import ConfirmationPage from "./pages/ConfirmationPage";
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<CartPage />} />
-        {/* <Route path="/login" element={<LoginPage />} /> */}
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/confirmation" element={<ConfirmationPage/>} />
       </Routes>
     </Router>
   );

@@ -1,30 +1,101 @@
 [
-    {
-      "id": 1,
-      "title": "Luxury Villa",
-      "description": "A beautiful villa with a pool and garden.",
-      "price": 250,
-      "location": "Goa",
-      "bedrooms": 3,
-      "image": "/public/images/pexels-curtis-adams-1694007-3555615.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Cozy Apartment",
-      "description": "A modern apartment in the city center.",
-      "price": 120,
-      "location": "Mumbai",
-      "bedrooms": 2,
-      "image": "/public/images/pexels-binyaminmellish-106399.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Beach House",
-      "description": "Enjoy the beach with this seaside house.",
-      "price": 300,
-      "location": "Kerala",
-      "bedrooms": 4,
-      "image": "/public/images/pexels-pixabay-277667.jpg"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Luxury Villa",
+    "description": "A beautiful villa with a pool and garden.",
+    "price": 250,
+    "location": "Goa",
+    "bedrooms": 3,
+    "image": "/public/images/pexels-curtis-adams-1694007-3555615.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Cozy Apartment",
+    "description": "A modern apartment in the city center.",
+    "price": 120,
+    "location": "Mumbai",
+    "bedrooms": 2,
+    "image": "/public/images/pexels-binyaminmellish-106399.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Beach House",
+    "description": "Enjoy the beach with this seaside house.",
+    "price": 300,
+    "location": "Kerala",
+    "bedrooms": 4,
+    "image": "/public/images/pexels-pixabay-277667.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Mountain Retreat",
+    "description": "A peaceful retreat in the mountains with stunning views.",
+    "price": 200,
+    "location": "Manali",
+    "bedrooms": 3,
+    "image": "/public/images/pexels-binyaminmellish-106399.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Urban Loft",
+    "description": "A chic loft in the heart of the city.",
+    "price": 400,
+    "location": "Bangalore",
+    "bedrooms": 2,
+    "image": "/public/images/pexels-pixabay-209296.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Seaside Cottage",
+    "description": "A cozy cottage by the beach, perfect for a relaxing holiday.",
+    "price": 180,
+    "location": "Pondicherry",
+    "bedrooms": 2,
+    "image": "/public/images/pexels-pixabay-277667.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Historic Mansion",
+    "description": "A grand mansion with a rich history, perfect for luxury stays.",
+    "price": 600,
+    "location": "Jaipur",
+    "bedrooms": 6,
+    "image": "/public/images/pexels-binyaminmellish-106399.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Countryside Villa",
+    "description": "A serene villa in the countryside surrounded by nature.",
+    "price": 350,
+    "location": "Ooty",
+    "bedrooms": 4,
+    "image": "/public/images/pexels-pixabay-210617.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Luxury Penthouse",
+    "description": "A high-end penthouse with modern amenities.",
+    "price": 500,
+    "location": "Delhi",
+    "bedrooms": 5,
+    "image": "/public/images/pexels-pixabay-277667.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Desert Villa",
+    "description": "A unique villa located in the beautiful desert.",
+    "price": 450,
+    "location": "Jaisalmer",
+    "bedrooms": 3,
+    "image": "/public/images/pexels-pixabay-209315.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Forest Cabin",
+    "description": "A rustic cabin in the woods, ideal for nature lovers.",
+    "price": 170,
+    "location": "Coorg",
+    "bedrooms": 2,
+    "image": "/public/images/pexels-curtis-adams-1694007-3555615.jpg"
+  }
+]
