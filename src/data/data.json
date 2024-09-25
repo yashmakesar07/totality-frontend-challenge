@@ -6,7 +6,7 @@
       "price": 250,
       "location": "Goa",
       "bedrooms": 3,
-      "image": "https://via.placeholder.com/150"
+      "image": "/public/images/pexels-curtis-adams-1694007-3555615.jpg"
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "price": 120,
       "location": "Mumbai",
       "bedrooms": 2,
-      "image": "https://via.placeholder.com/150"
+      "image": "/public/images/pexels-binyaminmellish-106399.jpg"
     },
     {
       "id": 3,
@@ -24,7 +24,7 @@
       "price": 300,
       "location": "Kerala",
       "bedrooms": 4,
-      "image": "https://via.placeholder.com/150"
+      "image": "/public/images/pexels-pixabay-277667.jpg"
     }
   ]
   

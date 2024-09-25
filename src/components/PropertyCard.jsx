@@ -21,7 +21,7 @@ const PropertyCard = ({ property }) => {
       hoverable
       cover={<img alt={property.title} src={property.image} />}
       actions={[
-        <Button type="primary" onClick={handleBookNow}>Book Now</Button>,
+        <Button type="primary" onClick={handleBookNow} style={{width:"100%", height: "50px"}}>Book Now</Button>,
       ]}
     >
       <Card.Meta title={property.title} description={`Location: ${property.location}`} />

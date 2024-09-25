@@ -8,14 +8,38 @@ export const fetchProperties = createAsyncThunk('properties/fetchProperties', as
   return data;
 });
 
+const initialState = {
+  properties: [],
+  status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+  error: null,
+  filters: {
+    location: '',
+    priceRange: [0, 1000],
+    bedrooms: 1,
+    amenities: [],
+  },
+};
+
 const propertySlice = createSlice({
   name: 'properties',
-  initialState: {
-    properties: [],
-    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
-    error: null,
+  initialState,
+  reducers: {
+    setLocation: (state, action) => {
+      state.filters.location = action.payload;
+    },
+    setPriceRange: (state, action) => {
+      state.filters.priceRange = action.payload;
+    },
+    setBedrooms: (state, action) => {
+      state.filters.bedrooms = action.payload;
+    },
+    setAmenities: (state, action) => {
+      state.filters.amenities = action.payload;
+    },
+    resetFilters: (state) => {
+      state.filters = initialState.filters;
+    },
   },
-  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchProperties.pending, (state) => {
@@ -32,5 +56,7 @@ const propertySlice = createSlice({
       });
   },
 });
+
+export const { setLocation, setPriceRange, setBedrooms, setAmenities, resetFilters } = propertySlice.actions;
 
 export default propertySlice.reducer;
