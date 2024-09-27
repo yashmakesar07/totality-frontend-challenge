@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk to fetch properties from the JSON file
 export const fetchProperties = createAsyncThunk('properties/fetchProperties', async () => {
-  const response = await fetch('/src/data/data.json'); // Adjust the path if needed
+  const response = await fetch('/public/data/data.json'); // Adjust the path if needed
   const data = await response.json();
   return data;
 });
