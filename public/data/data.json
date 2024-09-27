@@ -6,7 +6,7 @@
     "price": 250,
     "location": "Goa",
     "bedrooms": 3,
-    "image": "/public/images/2.jpg"
+    "image": "/images/2.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "price": 120,
     "location": "Mumbai",
     "bedrooms": 2,
-    "image": "/public/images/6.jpg"
+    "image": "/images/6.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": 300,
     "location": "Kerala",
     "bedrooms": 4,
-    "image": "/public/images/7.jpg"
+    "image": "/images/7.jpg"
   },
   {
     "id": 4,
