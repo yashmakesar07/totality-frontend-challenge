@@ -33,7 +33,7 @@
     "price": 200,
     "location": "Manali",
     "bedrooms": 3,
-    "image": "/public/images/pexels-binyaminmellish-106399.jpg"
+    "image": "/images/pexels-binyaminmellish-106399.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "price": 400,
     "location": "Bangalore",
     "bedrooms": 2,
-    "image": "/public/images/pexels-pixabay-209296.jpg"
+    "image": "/images/pexels-pixabay-209296.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "price": 180,
     "location": "Pondicherry",
     "bedrooms": 2,
-    "image": "/public/images/pexels-pixabay-277667.jpg"
+    "image": "/images/pexels-pixabay-277667.jpg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "price": 600,
     "location": "Jaipur",
     "bedrooms": 6,
-    "image": "/public/images/pexels-binyaminmellish-106399.jpg"
+    "image": "/images/pexels-binyaminmellish-106399.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "price": 350,
     "location": "Ooty",
     "bedrooms": 4,
-    "image": "/public/images/pexels-pixabay-210617.jpg"
+    "image": "/images/pexels-pixabay-210617.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "price": 500,
     "location": "Delhi",
     "bedrooms": 5,
-    "image": "/public/images/pexels-pixabay-277667.jpg"
+    "image": "/images/pexels-pixabay-277667.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "price": 450,
     "location": "Jaisalmer",
     "bedrooms": 3,
-    "image": "/public/images/pexels-pixabay-209315.jpg"
+    "image": "/images/pexels-pixabay-209315.jpg"
   },
   {
     "id": 11,
@@ -96,6 +96,6 @@
     "price": 170,
     "location": "Coorg",
     "bedrooms": 2,
-    "image": "/public/images/pexels-curtis-adams-1694007-3555615.jpg"
+    "image": "/images/pexels-curtis-adams-1694007-3555615.jpg"
   }
 ]

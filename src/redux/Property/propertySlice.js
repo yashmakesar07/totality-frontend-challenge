@@ -1,9 +1,13 @@
 // src/store/propertySlice.js
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// Async thunk to fetch properties from the JSON file
+// Async thunk to fetch properties from the JSON file in the public folder
 export const fetchProperties = createAsyncThunk('properties/fetchProperties', async () => {
-  const response = await fetch('/public/data/data.json'); // Adjust the path if needed
+  const response = await fetch('/data/data.json'); // Correct path to the JSON file in the public folder
+  if (!response.ok) {
+    throw new Error(`Failed to fetch properties, HTTP status: ${response.status}`);
+  }
   const data = await response.json();
   return data;
 });
@@ -47,8 +51,7 @@ const propertySlice = createSlice({
       })
       .addCase(fetchProperties.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        // Add any fetched properties to the array
-        state.properties = action.payload;
+        state.properties = action.payload; // Add fetched properties to state
       })
       .addCase(fetchProperties.rejected, (state, action) => {
         state.status = 'failed';
