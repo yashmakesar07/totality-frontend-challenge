@@ -2,10 +2,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import HomePage from "./pages/HomePage";
+
 import CartPage from "./pages/CartPage"; 
 import CheckoutPage from "./pages/CheckoutPage";
 import ConfirmationPage from "./pages/ConfirmationPage";
+import HomePage from "./pages/Homepage";
 
 const App = () => {
   return (
